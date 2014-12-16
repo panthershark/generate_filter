@@ -1,6 +1,6 @@
 {
   "name": "generate_filter",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Generates a simple query for elastic searchset of filters for an elastic search query",
   "main": "index.js",
   "scripts": {

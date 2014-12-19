@@ -14,16 +14,18 @@ module.exports = function(v, k) {
     }
   };
 
-  var t = {}
-  t[k] = v;
 
   if (Array.isArray(v)) {
     f.filtered.filter.bool.should = _.map(v, function(val) {
+      var t = {}
+      t[k] = val;
       return {
         term: t
       };
     });
   } else {
+    var t = {}
+    t[k] = v;
     f.filtered.filter.bool.must = [{
       term: t
     }];
